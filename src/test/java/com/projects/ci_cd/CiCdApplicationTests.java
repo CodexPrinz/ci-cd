@@ -33,7 +33,7 @@ class CiCdApplicationTests {
 	@Test
 	void testGetAllProducts() {
 		ResponseEntity<Iterable<Product>> response = productController.getAllProducts();
-		log.info("Response: {}, {}", response.getBody(), response.getStatusCode());
+		log.info("Response body: {}, status: {}", response.getBody(), response.getStatusCode());
 		assertEquals(200, response.getStatusCodeValue());
 	}
 
